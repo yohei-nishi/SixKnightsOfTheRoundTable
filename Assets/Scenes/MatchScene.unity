@@ -186,7 +186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4959808671369312987, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
       propertyPath: m_Name
-      value: BattleLane (5)
+      value: BattleLane8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
@@ -201,8 +201,8 @@ GameObject:
   - component: {fileID: 119738744}
   - component: {fileID: 119738747}
   - component: {fileID: 119738745}
-  - component: {fileID: 119738750}
   - component: {fileID: 119738749}
+  - component: {fileID: 119738750}
   m_Layer: 0
   m_Name: "\u6226\u58EB\u3000\u5473\u65B9"
   m_TagString: Untagged
@@ -329,20 +329,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 119738743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c371729ed6e2a468e1fead925ffbca, type: 3}
+  m_Script: {fileID: 11500000, guid: 975a0c2443c9fec4490500194da8e131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  lane1: {fileID: 0}
-  lane2: {fileID: 0}
-  lane3: {fileID: 0}
-  lane4: {fileID: 0}
-  lane5: {fileID: 0}
-  script1: {fileID: 0}
-  script2: {fileID: 0}
-  script3: {fileID: 0}
-  script4: {fileID: 0}
-  script5: {fileID: 0}
 --- !u!1 &168580019
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,20 +650,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 310622997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c371729ed6e2a468e1fead925ffbca, type: 3}
+  m_Script: {fileID: 11500000, guid: 975a0c2443c9fec4490500194da8e131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  lane1: {fileID: 0}
-  lane2: {fileID: 0}
-  lane3: {fileID: 0}
-  lane4: {fileID: 0}
-  lane5: {fileID: 0}
-  script1: {fileID: 0}
-  script2: {fileID: 0}
-  script3: {fileID: 0}
-  script4: {fileID: 0}
-  script5: {fileID: 0}
 --- !u!1 &329158256
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,6 +698,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e023bda230fa04f827a258e5cc17c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charactor1: {fileID: 0}
+  charactor2: {fileID: 0}
+  charactor3: {fileID: 0}
+  charactor4: {fileID: 0}
+  charactor5: {fileID: 0}
+  charactor6: {fileID: 0}
+  lane1: {fileID: 0}
+  lane2: {fileID: 0}
+  lane3: {fileID: 0}
+  lane4: {fileID: 0}
+  lane5: {fileID: 0}
+  lane6: {fileID: 0}
+  lane7: {fileID: 0}
+  lane8: {fileID: 0}
+  lane9: {fileID: 0}
+  lane10: {fileID: 0}
+  scriptCC1: {fileID: 0}
+  scriptCC2: {fileID: 0}
+  scriptCC3: {fileID: 0}
+  scriptCC4: {fileID: 0}
+  scriptCC5: {fileID: 0}
+  scriptCC6: {fileID: 0}
+  scriptLC1: {fileID: 0}
+  scriptLC2: {fileID: 0}
+  scriptLC3: {fileID: 0}
+  scriptLC4: {fileID: 0}
+  scriptLC5: {fileID: 0}
 --- !u!1 &421442912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,7 +1411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4959808671369312987, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
       propertyPath: m_Name
-      value: BattleLane (8)
+      value: BattleLane7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
@@ -2068,20 +2075,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 860380733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c371729ed6e2a468e1fead925ffbca, type: 3}
+  m_Script: {fileID: 11500000, guid: 975a0c2443c9fec4490500194da8e131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  lane1: {fileID: 0}
-  lane2: {fileID: 0}
-  lane3: {fileID: 0}
-  lane4: {fileID: 0}
-  lane5: {fileID: 0}
-  script1: {fileID: 0}
-  script2: {fileID: 0}
-  script3: {fileID: 0}
-  script4: {fileID: 0}
-  script5: {fileID: 0}
 --- !u!1001 &875773666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2135,7 +2132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4959808671369312987, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
       propertyPath: m_Name
-      value: BattleLane (7)
+      value: BattleLane10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
@@ -2278,20 +2275,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 918934224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c371729ed6e2a468e1fead925ffbca, type: 3}
+  m_Script: {fileID: 11500000, guid: 975a0c2443c9fec4490500194da8e131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  lane1: {fileID: 0}
-  lane2: {fileID: 0}
-  lane3: {fileID: 0}
-  lane4: {fileID: 0}
-  lane5: {fileID: 0}
-  script1: {fileID: 0}
-  script2: {fileID: 0}
-  script3: {fileID: 0}
-  script4: {fileID: 0}
-  script5: {fileID: 0}
 --- !u!1001 &971195976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2687,7 +2674,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3394761812630600314, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
   m_PrefabInstance: {fileID: 1440213721}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1187279213
+--- !u!114 &1187279210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2696,22 +2683,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 53697658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e3a3f9d783f43f428d7842127f3cdce, type: 3}
+  m_Script: {fileID: 11500000, guid: 589218f7dfbbe6243909ce0195d4312f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  charactor1: {fileID: 0}
-  charactor2: {fileID: 0}
-  charactor3: {fileID: 0}
-  charactor4: {fileID: 0}
-  charactor5: {fileID: 0}
-  charactor6: {fileID: 0}
-  script1: {fileID: 0}
-  script2: {fileID: 0}
-  script3: {fileID: 0}
-  script4: {fileID: 0}
-  script5: {fileID: 0}
-  script6: {fileID: 0}
 --- !u!1 &1238543353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,7 +2832,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4959808671369312987, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
   m_PrefabInstance: {fileID: 525179372}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1331179638
+--- !u!114 &1331179635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2866,22 +2841,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1331179634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e3a3f9d783f43f428d7842127f3cdce, type: 3}
+  m_Script: {fileID: 11500000, guid: 589218f7dfbbe6243909ce0195d4312f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  charactor1: {fileID: 0}
-  charactor2: {fileID: 0}
-  charactor3: {fileID: 0}
-  charactor4: {fileID: 0}
-  charactor5: {fileID: 0}
-  charactor6: {fileID: 0}
-  script1: {fileID: 0}
-  script2: {fileID: 0}
-  script3: {fileID: 0}
-  script4: {fileID: 0}
-  script5: {fileID: 0}
-  script6: {fileID: 0}
 --- !u!4 &1364275967 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3394761812630600314, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
@@ -3026,20 +2989,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1374854149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c371729ed6e2a468e1fead925ffbca, type: 3}
+  m_Script: {fileID: 11500000, guid: 975a0c2443c9fec4490500194da8e131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  lane1: {fileID: 0}
-  lane2: {fileID: 0}
-  lane3: {fileID: 0}
-  lane4: {fileID: 0}
-  lane5: {fileID: 0}
-  script1: {fileID: 0}
-  script2: {fileID: 0}
-  script3: {fileID: 0}
-  script4: {fileID: 0}
-  script5: {fileID: 0}
 --- !u!4 &1380493955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3394761812630600314, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
@@ -3371,7 +3324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4959808671369312987, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
       propertyPath: m_Name
-      value: BattleLane (9)
+      value: BattleLane6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
@@ -3380,7 +3333,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3394761812630600314, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
   m_PrefabInstance: {fileID: 887105026668233071}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1596549397
+--- !u!114 &1596549394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3389,22 +3342,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1443984751}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e3a3f9d783f43f428d7842127f3cdce, type: 3}
+  m_Script: {fileID: 11500000, guid: 589218f7dfbbe6243909ce0195d4312f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  charactor1: {fileID: 0}
-  charactor2: {fileID: 0}
-  charactor3: {fileID: 0}
-  charactor4: {fileID: 0}
-  charactor5: {fileID: 0}
-  charactor6: {fileID: 0}
-  script1: {fileID: 0}
-  script2: {fileID: 0}
-  script3: {fileID: 0}
-  script4: {fileID: 0}
-  script5: {fileID: 0}
-  script6: {fileID: 0}
 --- !u!1 &1666403617
 GameObject:
   m_ObjectHideFlags: 0
@@ -3630,7 +3571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4959808671369312987, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
       propertyPath: m_Name
-      value: BattleLane (6)
+      value: BattleLane9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
@@ -3639,7 +3580,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4959808671369312987, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
   m_PrefabInstance: {fileID: 2025724591}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1741300859
+--- !u!114 &1741300856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3648,22 +3589,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1741300855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e3a3f9d783f43f428d7842127f3cdce, type: 3}
+  m_Script: {fileID: 11500000, guid: 589218f7dfbbe6243909ce0195d4312f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  charactor1: {fileID: 0}
-  charactor2: {fileID: 0}
-  charactor3: {fileID: 0}
-  charactor4: {fileID: 0}
-  charactor5: {fileID: 0}
-  charactor6: {fileID: 0}
-  script1: {fileID: 0}
-  script2: {fileID: 0}
-  script3: {fileID: 0}
-  script4: {fileID: 0}
-  script5: {fileID: 0}
-  script6: {fileID: 0}
 --- !u!1 &1798720417
 GameObject:
   m_ObjectHideFlags: 0
@@ -3804,7 +3733,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4959808671369312987, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
   m_PrefabInstance: {fileID: 1113510810}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1848358452
+--- !u!114 &1848358449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3813,22 +3742,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1848358448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e3a3f9d783f43f428d7842127f3cdce, type: 3}
+  m_Script: {fileID: 11500000, guid: 589218f7dfbbe6243909ce0195d4312f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  charactor1: {fileID: 0}
-  charactor2: {fileID: 0}
-  charactor3: {fileID: 0}
-  charactor4: {fileID: 0}
-  charactor5: {fileID: 0}
-  charactor6: {fileID: 0}
-  script1: {fileID: 0}
-  script2: {fileID: 0}
-  script3: {fileID: 0}
-  script4: {fileID: 0}
-  script5: {fileID: 0}
-  script6: {fileID: 0}
 --- !u!1 &1849074803
 GameObject:
   m_ObjectHideFlags: 0
@@ -4103,8 +4020,8 @@ GameObject:
   - component: {fileID: 2135567489}
   - component: {fileID: 2135567494}
   - component: {fileID: 2135567491}
-  - component: {fileID: 2135567492}
   - component: {fileID: 2135567495}
+  - component: {fileID: 2135567496}
   m_Layer: 0
   m_Name: "\u8853\u5E2B\u3000\u5473\u65B9"
   m_TagString: Untagged
@@ -4153,29 +4070,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.99, y: 4.73}
   m_EdgeRadius: 0
---- !u!114 &2135567492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135567488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c371729ed6e2a468e1fead925ffbca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 0
-  lane1: {fileID: 0}
-  lane2: {fileID: 0}
-  lane3: {fileID: 0}
-  lane4: {fileID: 0}
-  lane5: {fileID: 0}
-  script1: {fileID: 0}
-  script2: {fileID: 0}
-  script3: {fileID: 0}
-  script4: {fileID: 0}
-  script5: {fileID: 0}
 --- !u!212 &2135567494
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4245,6 +4139,19 @@ MonoBehaviour:
   Deffence: 1
   DeffenceCost: 2
   Charge: 8
+--- !u!114 &2135567496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135567488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975a0c2443c9fec4490500194da8e131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
 --- !u!1001 &581893325919085526
 PrefabInstance:
   m_ObjectHideFlags: 0

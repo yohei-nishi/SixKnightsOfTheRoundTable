@@ -64,7 +64,6 @@ public class TouchSensor : MonoBehaviour
             state = State.selected;
 
             // このキャラを光らせる
-            // レーンの状態が"available"なら"lightUp"に変える
             // 他のキャラが選択状態なら待機に戻す
         }
     }
@@ -84,5 +83,5 @@ public class TouchSensor : MonoBehaviour
 
     // 【予定】自身が選択状態のとき、他のカードが選択状態になったらこのカードを待機状態に戻す。
 
-    // 【予定】ターン終了時、Statusを０にしてカードの位置を戻す。
+    // 【予定】ターン終了時、Statusをidleにしてカードの位置を戻す。
 }
