@@ -2595,7 +2595,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laneState: 0
+  renderComponent: {fileID: 1187279212}
   gameController: {fileID: 0}
+--- !u!212 &1187279212 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 28113400727116360, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
+  m_PrefabInstance: {fileID: 1440213721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1238543353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2754,7 +2760,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laneState: 0
+  renderComponent: {fileID: 1331179637}
   gameController: {fileID: 0}
+--- !u!212 &1331179637 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 28113400727116360, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
+  m_PrefabInstance: {fileID: 525179372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1364275967 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3394761812630600314, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
@@ -3257,7 +3269,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laneState: 0
+  renderComponent: {fileID: 1596549396}
   gameController: {fileID: 0}
+--- !u!212 &1596549396 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 28113400727116360, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
+  m_PrefabInstance: {fileID: 887105026668233071}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1666403617
 GameObject:
   m_ObjectHideFlags: 0
@@ -3481,7 +3499,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laneState: 0
+  renderComponent: {fileID: 1741300858}
   gameController: {fileID: 0}
+--- !u!212 &1741300858 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 28113400727116360, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
+  m_PrefabInstance: {fileID: 2025724591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1798720417
 GameObject:
   m_ObjectHideFlags: 0
@@ -3635,7 +3659,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laneState: 0
+  renderComponent: {fileID: 1848358451}
   gameController: {fileID: 0}
+--- !u!212 &1848358451 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 28113400727116360, guid: c5147e4f105a3e34795628dc6c9e6a9f, type: 3}
+  m_PrefabInstance: {fileID: 1113510810}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1849074803
 GameObject:
   m_ObjectHideFlags: 0

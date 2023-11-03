@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using static GameController;
+using DG.Tweening;
 
 public class CharactorController : MonoBehaviour
 {
     // キャラの状態
     public enum CharactorState { idle, selected, disable }
     public CharactorState charactorState = CharactorState.idle;
+
+    // Inspectorで見えるようにRenderの変数を作る
+    [SerializeField]
+    UnityEngine.UI.Image image;
 
     // GameControllerのオブジェクト
     public GameObject gameController;
@@ -33,7 +38,16 @@ public class CharactorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        switch (charactorState)
+        {
+            case CharactorState.idle:
+                break;
+            case CharactorState.selected:
+                // キャラを点滅
+                break;
+            case CharactorState.disable:
+                break;
+        }
     }
 
     // キャラがクリックされたときに実行される処理
