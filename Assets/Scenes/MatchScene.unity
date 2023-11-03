@@ -333,6 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charactorState: 0
+  sprite: {fileID: 0}
   gameController: {fileID: 0}
 --- !u!1 &168580019
 GameObject:
@@ -655,6 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charactorState: 0
+  sprite: {fileID: 0}
   gameController: {fileID: 0}
 --- !u!1 &329158256
 GameObject:
@@ -700,6 +702,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e023bda230fa04f827a258e5cc17c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charactor:
+  - {fileID: 2135567488}
+  - {fileID: 119738743}
+  - {fileID: 918934224}
+  - {fileID: 310622997}
+  - {fileID: 1374854149}
+  - {fileID: 860380733}
+  lane:
+  - {fileID: 53697658}
+  - {fileID: 1741300855}
+  - {fileID: 1443984751}
+  - {fileID: 1331179634}
+  - {fileID: 1848358448}
   charactor1: {fileID: 0}
   charactor2: {fileID: 0}
   charactor3: {fileID: 0}
@@ -1985,6 +2000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charactorState: 0
+  sprite: {fileID: 0}
   gameController: {fileID: 0}
 --- !u!1001 &875773666
 PrefabInstance:
@@ -2186,6 +2202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charactorState: 0
+  sprite: {fileID: 0}
   gameController: {fileID: 0}
 --- !u!1001 &971195976
 PrefabInstance:
@@ -2915,6 +2932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charactorState: 0
+  sprite: {fileID: 0}
   gameController: {fileID: 0}
 --- !u!4 &1380493955 stripped
 Transform:
@@ -4048,6 +4066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charactorState: 0
+  sprite: {fileID: 0}
   gameController: {fileID: 0}
 --- !u!1001 &581893325919085526
 PrefabInstance:

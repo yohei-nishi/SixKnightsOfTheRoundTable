@@ -11,9 +11,9 @@ public class CharactorController : MonoBehaviour
     public enum CharactorState { idle, selected, disable }
     public CharactorState charactorState = CharactorState.idle;
 
-    // Inspectorで見えるようにRenderの変数を作る
+    // [未完]　Inspectorで見えるようにRenderの変数を作る
     [SerializeField]
-    UnityEngine.UI.Image image;
+    SpriteRenderer sprite;
 
     // GameControllerのオブジェクト
     public GameObject gameController;
@@ -21,7 +21,11 @@ public class CharactorController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // GameControllerのオブジェクトを取得
         gameController = GameObject.Find("GameController");
+
+        // 【未完】キャラの画像を取得
+        this.sprite = GetComponent<SpriteRenderer>();
 
         // EventTriggerを設定
         gameObject.AddComponent<EventTrigger>();
@@ -38,17 +42,9 @@ public class CharactorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (charactorState)
-        {
-            case CharactorState.idle:
-                break;
-            case CharactorState.selected:
-                // キャラを点滅
-                break;
-            case CharactorState.disable:
-                break;
-        }
+
     }
+       
 
     // キャラがクリックされたときに実行される処理
     public void OnClickThis()
@@ -58,9 +54,7 @@ public class CharactorController : MonoBehaviour
         {
             Debug.Log("選択状態にした");
             charactorState = CharactorState.selected;
-
-            // このキャラを光らせる
-            // 他のキャラが選択状態なら待機に戻す
+            sprite.DOFade(0.5f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetId("Fade");
         }
     }
 
@@ -72,6 +66,7 @@ public class CharactorController : MonoBehaviour
         {
             Debug.Log("選択不可にした");
             charactorState = CharactorState.disable;
+            
 
             // 【予定】発光を元に戻し、カードを移動する
         }

@@ -1,12 +1,18 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using static CharactorController;
 
 public class GameController : MonoBehaviour
 {
 
-    // キャラとレーンのオブジェクト
+    // キャラとレーンのオブジェクトを入れるリスト
+    public List<GameObject> charactor;
+    public List<GameObject> lane;
+
+    // 消す
     public GameObject charactor1;
     public GameObject charactor2;
     public GameObject charactor3;
@@ -24,7 +30,7 @@ public class GameController : MonoBehaviour
     public GameObject lane9;
     public GameObject lane10;
 
-    // キャラとレーンのスクリプト
+    // 消す
     public CharactorController scriptCC1;
     public CharactorController scriptCC2;
     public CharactorController scriptCC3;
@@ -37,7 +43,6 @@ public class GameController : MonoBehaviour
     public LaneController      scriptLC4;
     public LaneController      scriptLC5;
 
-    // キャラとレーンの選択の型
 
     // Start is called before the first frame update
     void Start()
@@ -72,6 +77,8 @@ public class GameController : MonoBehaviour
         scriptLC3 = lane3.GetComponent<LaneController>();
         scriptLC4 = lane4.GetComponent<LaneController>();
         scriptLC5 = lane5.GetComponent<LaneController>();
+
+
 
         // 各キャラとレーンのStateを初期化
 
@@ -195,6 +202,7 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("キャラ1を選択不可にした");
             scriptCC1.charactorState = CharactorState.disable;
+            DOTween.Kill("Fade");
         }
         if (scriptCC2.charactorState == CharactorState.selected)
         {
