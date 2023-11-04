@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using static CharactorController;
 
@@ -9,9 +10,9 @@ public class GameController : MonoBehaviour
 {
 
     // キャラとレーンのオブジェクトを入れるリスト
-    public List<GameObject> charactor;
-    public List<GameObject> lane;
-
+    public GameObject[] charactor;
+    public CharactorController[] scriptC;
+    
     // 消す
     public GameObject charactor1;
     public GameObject charactor2;
@@ -66,6 +67,8 @@ public class GameController : MonoBehaviour
         this.lane10     = GameObject.Find("BattleLane10");
 
         // スクリプトを取得
+        
+
         scriptCC1 = charactor1.GetComponent<CharactorController>();
         scriptCC2 = charactor2.GetComponent<CharactorController>();
         scriptCC3 = charactor3.GetComponent<CharactorController>();
@@ -78,8 +81,6 @@ public class GameController : MonoBehaviour
         scriptLC4 = lane4.GetComponent<LaneController>();
         scriptLC5 = lane5.GetComponent<LaneController>();
 
-
-
         // 各キャラとレーンのStateを初期化
 
     }
@@ -87,7 +88,6 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // 各キャラとレーンのStateを監視
         
     }
 
@@ -95,35 +95,13 @@ public class GameController : MonoBehaviour
     public void OnClickChara()
     {
         // 選択状態のキャラを待機に戻す
-        if (scriptCC1.charactorState == CharactorState.selected)
+        for (int i = 0; i < scriptC.Length; i++)
         {
-            Debug.Log("キャラ1を待機状態に戻した");
-            scriptCC1.charactorState = CharactorState.idle;
-        }
-        if (scriptCC2.charactorState == CharactorState.selected)
-        {
-            Debug.Log("キャラ2を待機状態に戻した");
-            scriptCC2.charactorState = CharactorState.idle;
-        }
-        if (scriptCC3.charactorState == CharactorState.selected)
-        {
-            Debug.Log("キャラ3を待機状態に戻した");
-            scriptCC3.charactorState = CharactorState.idle;
-        }
-        if (scriptCC4.charactorState == CharactorState.selected)
-        {
-            Debug.Log("キャラ4を待機状態に戻した");
-            scriptCC4.charactorState = CharactorState.idle;
-        }
-        if (scriptCC5.charactorState == CharactorState.selected)
-        {
-            Debug.Log("キャラ5を待機状態に戻した");
-            scriptCC5.charactorState = CharactorState.idle;
-        }
-        if (scriptCC6.charactorState == CharactorState.selected)
-        {
-            Debug.Log("キャラ6を待機状態に戻した");
-            scriptCC6.charactorState = CharactorState.idle;
+            if (scriptC[i].charactorState == CharactorState.selected)
+            {
+                scriptC[i].charactorState = CharactorState.idle;
+                DOTween.Kill("Fade");
+            }
         }
     }
 

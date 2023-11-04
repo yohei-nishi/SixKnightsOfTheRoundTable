@@ -709,13 +709,14 @@ MonoBehaviour:
   - {fileID: 310622997}
   - {fileID: 1374854149}
   - {fileID: 860380733}
-  lane:
-  - {fileID: 53697658}
-  - {fileID: 1741300855}
-  - {fileID: 1443984751}
-  - {fileID: 1331179634}
-  - {fileID: 1848358448}
-  charactor1: {fileID: 0}
+  scriptC:
+  - {fileID: 2135567496}
+  - {fileID: 119738750}
+  - {fileID: 918934231}
+  - {fileID: 310623004}
+  - {fileID: 1374854156}
+  - {fileID: 860380740}
+  charactor1: {fileID: 2135567488}
   charactor2: {fileID: 0}
   charactor3: {fileID: 0}
   charactor4: {fileID: 0}
@@ -731,7 +732,7 @@ MonoBehaviour:
   lane8: {fileID: 0}
   lane9: {fileID: 0}
   lane10: {fileID: 0}
-  scriptCC1: {fileID: 0}
+  scriptCC1: {fileID: 2135567496}
   scriptCC2: {fileID: 0}
   scriptCC3: {fileID: 0}
   scriptCC4: {fileID: 0}
