@@ -8,167 +8,42 @@ using static CharactorController;
 
 public class GameController : MonoBehaviour
 {
-
     // キャラとレーンのオブジェクトを入れるリスト
     public GameObject[] charactor;
+    public GameObject[] Lane;
     public CharactorController[] scriptC;
+    public LaneController[] scriptL;
     
-    // 消す
-    public GameObject charactor1;
-    public GameObject charactor2;
-    public GameObject charactor3;
-    public GameObject charactor4;
-    public GameObject charactor5;
-    public GameObject charactor6;
-    public GameObject lane1;
-    public GameObject lane2;
-    public GameObject lane3;
-    public GameObject lane4;
-    public GameObject lane5;
-    public GameObject lane6;
-    public GameObject lane7;
-    public GameObject lane8;
-    public GameObject lane9;
-    public GameObject lane10;
-
-    // 消す
-    public CharactorController scriptCC1;
-    public CharactorController scriptCC2;
-    public CharactorController scriptCC3;
-    public CharactorController scriptCC4;
-    public CharactorController scriptCC5;
-    public CharactorController scriptCC6;
-    public LaneController      scriptLC1;
-    public LaneController      scriptLC2;
-    public LaneController      scriptLC3;
-    public LaneController      scriptLC4;
-    public LaneController      scriptLC5;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        // オブジェクトを取得
-        this.charactor1 = GameObject.Find("術師　味方");
-        this.charactor2 = GameObject.Find("戦士　味方");
-        this.charactor3 = GameObject.Find("騎士　味方");
-        this.charactor4 = GameObject.Find("狩人　味方");
-        this.charactor5 = GameObject.Find("戦車　味方");
-        this.charactor6 = GameObject.Find("隠者　味方");
-        this.lane1      = GameObject.Find("BattleLane1");
-        this.lane2      = GameObject.Find("BattleLane2");
-        this.lane3      = GameObject.Find("BattleLane3");
-        this.lane4      = GameObject.Find("BattleLane4");
-        this.lane5      = GameObject.Find("BattleLane5");
-        this.lane6      = GameObject.Find("BattleLane6");
-        this.lane7      = GameObject.Find("BattleLane7");
-        this.lane8      = GameObject.Find("BattleLane8");
-        this.lane9      = GameObject.Find("BattleLane9");
-        this.lane10     = GameObject.Find("BattleLane10");
-
-        // スクリプトを取得
-        
-
-        scriptCC1 = charactor1.GetComponent<CharactorController>();
-        scriptCC2 = charactor2.GetComponent<CharactorController>();
-        scriptCC3 = charactor3.GetComponent<CharactorController>();
-        scriptCC4 = charactor4.GetComponent<CharactorController>();
-        scriptCC5 = charactor5.GetComponent<CharactorController>();
-        scriptCC6 = charactor6.GetComponent<CharactorController>();
-        scriptLC1 = lane1.GetComponent<LaneController>();
-        scriptLC2 = lane2.GetComponent<LaneController>();
-        scriptLC3 = lane3.GetComponent<LaneController>();
-        scriptLC4 = lane4.GetComponent<LaneController>();
-        scriptLC5 = lane5.GetComponent<LaneController>();
-
-        // 各キャラとレーンのStateを初期化
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    // カードをクリックしたときの処理
+    // キャラをクリックしたとき、既に選択状態のキャラを待機状態に戻す処理
     public void OnClickChara()
     {
-        // 選択状態のキャラを待機に戻す
-        for (int i = 0; i < scriptC.Length; i++)
-        {
-            if (scriptC[i].charactorState == CharactorState.selected)
-            {
-                scriptC[i].charactorState = CharactorState.idle;
-                DOTween.Kill("Fade");
-            }
+        foreach (var state in scriptC.Where(x => x.charactorState == CharactorState.selected))
+        { 
+            state.charactorState = CharactorController.CharactorState.idle;
+            DOTween.Kill("Fade");
         }
     }
 
-    // 
+    // キャラをクリックしたとき、キャラの選択状態に応じてレーンの状態を変える処理
     public void OnClickChara2()
     {
-        // 待機状態のキャラクターがいればレーンを発光状態に、
-        if (scriptCC1.charactorState == CharactorState.selected || 
-            scriptCC2.charactorState == CharactorState.selected ||
-            scriptCC3.charactorState == CharactorState.selected ||
-            scriptCC4.charactorState == CharactorState.selected ||
-            scriptCC5.charactorState == CharactorState.selected ||
-            scriptCC6.charactorState == CharactorState.selected   )
+        // 選択状態のキャラクターがいればレーンを発光状態に、
+        if (scriptC.Any(state => state.charactorState == CharactorState.selected))
         {
-            if (scriptLC1.laneState == LaneController.LaneState.available)
+            foreach(var state in scriptL.Where(x => x.laneState == LaneController.LaneState.available))
             {
-                Debug.Log("レーン1を発光状態にした");
-                scriptLC1.laneState = LaneController.LaneState.lightUp;
+                state.laneState = LaneController.LaneState.lightUp;
+                Debug.Log("レーンを発光させた");
+
             }
-            if (scriptLC2.laneState == LaneController.LaneState.available)
-            {
-                Debug.Log("レーン2を発光状態にした");
-                scriptLC2.laneState = LaneController.LaneState.lightUp;
-            }
-            if (scriptLC3.laneState == LaneController.LaneState.available)
-            {
-                Debug.Log("レーン3を発光状態にした");
-                scriptLC3.laneState = LaneController.LaneState.lightUp;
-            }
-            if (scriptLC4.laneState == LaneController.LaneState.available)
-            {
-                Debug.Log("レーン4を発光状態にした");
-                scriptLC4.laneState = LaneController.LaneState.lightUp;
-            }
-            if (scriptLC5.laneState == LaneController.LaneState.available)
-            {
-                Debug.Log("レーン5を発光状態にした");
-                scriptLC5.laneState = LaneController.LaneState.lightUp;
-            }
-        }
+        } 
         // いなければレーンを使用可能状態に
         else
         {
-            if (scriptLC1.laneState == LaneController.LaneState.lightUp)
+            foreach (var state in scriptL.Where(x => x.laneState == LaneController.LaneState.lightUp))
             {
-                Debug.Log("レーン1を使用可能にした");
-                scriptLC1.laneState = LaneController.LaneState.available;
-            }
-            if (scriptLC2.laneState == LaneController.LaneState.lightUp)
-            {
-                Debug.Log("レーン2を使用可能にした");
-                scriptLC2.laneState = LaneController.LaneState.available;
-            }
-            if (scriptLC3.laneState == LaneController.LaneState.lightUp)
-            {
-                Debug.Log("レーン3使用可能にした");
-                scriptLC3.laneState = LaneController.LaneState.available;
-            }
-            if (scriptLC4.laneState == LaneController.LaneState.lightUp)
-            {
-                Debug.Log("レーン4を使用可能にした");
-                scriptLC4.laneState = LaneController.LaneState.available;
-            }
-            if (scriptLC5.laneState == LaneController.LaneState.lightUp)
-            {
-                Debug.Log("レーン5を使用可能にした");
-                scriptLC5.laneState = LaneController.LaneState.available;
+                state.laneState = LaneController.LaneState.available;
+                Debug.Log("レーンを使用可能に戻した");
             }
         }
     }
@@ -176,61 +51,17 @@ public class GameController : MonoBehaviour
     // レーンをクリックしたときの処理
     public void OnClickLane()
     {
-        if (scriptCC1.charactorState == CharactorState.selected)
+        foreach (var state in scriptC.Where(x => x.charactorState == CharactorState.selected))
         {
-            Debug.Log("キャラ1を選択不可にした");
-            scriptCC1.charactorState = CharactorState.disable;
+            state.charactorState = CharactorController.CharactorState.disable;
             DOTween.Kill("Fade");
+            Debug.Log("キャラを選択不可にした");
         }
-        if (scriptCC2.charactorState == CharactorState.selected)
+        // 使わなかったレーンをavalableに戻す
+        foreach (var state in scriptL.Where(x => x.laneState == LaneController.LaneState.lightUp))
         {
-            Debug.Log("キャラ2を選択不可にした");
-            scriptCC2.charactorState = CharactorState.disable;
-        }
-        if (scriptCC3.charactorState == CharactorState.selected)
-        {
-            Debug.Log("キャラ3を選択不可にした");
-            scriptCC3.charactorState = CharactorState.disable;
-        }
-        if (scriptCC4.charactorState == CharactorState.selected)
-        {
-            Debug.Log("キャラ4を選択不可にした");
-            scriptCC4.charactorState = CharactorState.disable;
-        }
-        if (scriptCC5.charactorState == CharactorState.selected)
-        {
-            Debug.Log("キャラ5を選択不可にした");
-            scriptCC5.charactorState = CharactorState.disable;
-        }
-        if (scriptCC6.charactorState == CharactorState.selected)
-        {
-            Debug.Log("キャラ6を選択不可にした");
-            scriptCC6.charactorState = CharactorState.disable;
-        }
-        if (scriptLC1.laneState == LaneController.LaneState.lightUp)
-        {
-            Debug.Log("レーン1を使用可能に戻した");
-            scriptLC1.laneState = LaneController.LaneState.available;
-        }
-        if (scriptLC2.laneState == LaneController.LaneState.lightUp)
-        {
-            Debug.Log("レーン2を使用可能に戻した");
-            scriptLC2.laneState = LaneController.LaneState.available;
-        }
-        if (scriptLC3.laneState == LaneController.LaneState.lightUp)
-        {
-            Debug.Log("レーン3を使用可能に戻した");
-            scriptLC3.laneState = LaneController.LaneState.available;
-        }
-        if (scriptLC4.laneState == LaneController.LaneState.lightUp)
-        {
-            Debug.Log("レーン4を使用可能に戻した");
-            scriptLC4.laneState = LaneController.LaneState.available;
-        }
-        if (scriptLC5.laneState == LaneController.LaneState.lightUp)
-        {
-            Debug.Log("レーン5を使用可能に戻した");
-            scriptLC5.laneState = LaneController.LaneState.available;
+            state.laneState = LaneController.LaneState.available;
+            Debug.Log("レーンを使用可能に戻した");
         }
     }
 }
