@@ -17,13 +17,11 @@ public class CharactorController : MonoBehaviour
 
     // GameControllerのオブジェクト
     public GameObject gameController;
+    [SerializeField] GameController scriptGC;
 
     // Start is called before the first frame update
     void Start()
     {
-        // GameControllerのオブジェクトを取得
-        gameController = GameObject.Find("GameController");
-
         // 【未完】キャラの画像を取得
         this.sprite = GetComponent<SpriteRenderer>();
 
@@ -33,9 +31,9 @@ public class CharactorController : MonoBehaviour
         EventTrigger.Entry entry = new EventTrigger.Entry();
         entry.eventID = EventTriggerType.PointerClick;
         // ラムダ式の右辺｛｝内に実行したい関数を入れる
-        entry.callback.AddListener((evenData) => { gameController.GetComponent<GameController>().OnClickChara(); });
+        entry.callback.AddListener((evenData) => { scriptGC.OnClickChara(); });
         entry.callback.AddListener((evenData) => { OnClickThis(); });
-        entry.callback.AddListener((evenData) => { gameController.GetComponent<GameController>().OnClickChara2(); });
+        entry.callback.AddListener((evenData) => { scriptGC.OnClickChara2(); });
         trigger.triggers.Add(entry);
     }
 
@@ -50,7 +48,7 @@ public class CharactorController : MonoBehaviour
     public void OnClickThis()
     {
         // キャラが待機状態なら
-        if (charactorState == CharactorState.idle)
+        if (charactorState == CharactorState.idle && !scriptGC.isAnyLaneCS) 
         {
             Debug.Log("選択状態にした");
             charactorState = CharactorState.selected;

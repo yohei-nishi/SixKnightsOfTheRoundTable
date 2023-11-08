@@ -7,9 +7,13 @@ using DG.Tweening;
 
 public class LaneController : MonoBehaviour
 {
-    // レーンの状態｛使用可能、発光、使用済み｝
-    public enum LaneState { available, lightUp, used }
+    // レーンの状態｛使用可能、発光、コマンド選択、使用済み｝
+    public enum LaneState { available, lightUp, commandSelect,used }
     public LaneState laneState = LaneState.available;
+
+    // レーンのコマンド
+    public enum Command { none, attack, charge, guard, full}
+    public Command command = Command.none;
 
     // Inspectorで見えるようにRenderの変数を作る
     [SerializeField]
@@ -30,8 +34,9 @@ public class LaneController : MonoBehaviour
         EventTrigger.Entry entry = new EventTrigger.Entry();
         entry.eventID = EventTriggerType.PointerClick;
         // ラムダ式の右辺｛｝内に実行したい関数を入れる
-        entry.callback.AddListener((evenData) => { OnClickThis(); });
-        entry.callback.AddListener((evenData) => { gameController.GetComponent<GameController>().OnClickLane(); });
+        entry.callback.AddListener((evenData) => { OnClickThis(); }); // クリックされたlaneだけをlirhtUPからcommandSelectにする
+        entry.callback.AddListener((evenData => { }));　// UIボタンをクリックされたレーン上に出現させる。
+        entry.callback.AddListener((evenData) => { gameController.GetComponent<GameController>().OnClickLane(); }); // 選択状態のキャラを使用不可にして、残りのレーンをavailableに戻す
         trigger.triggers.Add(entry);
     }
 
@@ -47,6 +52,9 @@ public class LaneController : MonoBehaviour
             case LaneState.lightUp:
                 this.renderComponent.material.DOColor(Color.red, 0.2f);
                 break;
+            case LaneState.commandSelect:
+                this.renderComponent.material.DOColor(Color.yellow, 0.2f);
+                break;
             case LaneState.used:
                 this.renderComponent.material.DOColor(Color.green, 0.2f);
                 break;
@@ -59,9 +67,8 @@ public class LaneController : MonoBehaviour
         if(laneState == LaneState.lightUp)
         {
             // 発光状態なら使用済みにする
-            Debug.Log("使用済みにした");
-            laneState= LaneState.used;
+            Debug.Log("コマンド選択状態にした");
+            laneState= LaneState.commandSelect;
         }
-
     }
 }
