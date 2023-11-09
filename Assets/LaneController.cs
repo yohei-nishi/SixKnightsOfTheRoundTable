@@ -12,8 +12,8 @@ public class LaneController : MonoBehaviour
     public LaneState laneState = LaneState.available;
 
     // レーンのコマンド
-    public enum Command { none, attack, charge, guard, full}
-    public Command command = Command.none;
+    public enum Command { empty, attack, charge, guard, full}
+    public Command command = Command.empty;
 
     // Inspectorで見えるようにRenderの変数を作る
     [SerializeField]

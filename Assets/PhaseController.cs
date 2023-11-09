@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class OppLaneController : MonoBehaviour
+public class PhaseController : MonoBehaviour
 {
-    public enum Command { empty, attack, charge, guard, full}
-    public Command command;
-    // Start is called before the first frame update
+    // åªç›ÇÃPhase
+    public enum Phase {first, second, third }
+    public Phase phase = Phase.first;
+
     void Start()
     {
         

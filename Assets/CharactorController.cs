@@ -47,8 +47,8 @@ public class CharactorController : MonoBehaviour
     // キャラがクリックされたときに実行される処理
     public void OnClickThis()
     {
-        // キャラが待機状態なら
-        if (charactorState == CharactorState.idle && !scriptGC.isAnyLaneCS) 
+        // キャラが待機状態かつ全てのレーンがコマンド選択状態ではなく、ダメージ演出中では無いのなら
+        if (charactorState == CharactorState.idle && !scriptGC.isAnyLaneCS && !scriptGC.isInJudge) 
         {
             Debug.Log("選択状態にした");
             charactorState = CharactorState.selected;

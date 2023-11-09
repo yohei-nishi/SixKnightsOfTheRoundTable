@@ -25,11 +25,14 @@ public class GameController : MonoBehaviour
     // コマンド選択状態のレーンの座標
     public Transform laneCsTransfom;
 
-    // canvasと生成したいボタンの
+    // コマンドボタンのリスト
     [SerializeField] List<GameObject> commadButton;
 
-    // Canvasの座標
-    [SerializeField] RectTransform canvasRect;
+    // ダメージ判定ボタン
+    [SerializeField] GameObject judgeButton;
+
+    // ダメージ判定中か否か
+    public bool isInJudge = false;
     
     // キャラをクリックしたとき、既に選択状態のキャラを待機状態に戻す処理
     public void OnClickChara()
@@ -130,6 +133,8 @@ public class GameController : MonoBehaviour
         {
             state.laneState = LaneController.LaneState.used;
             Debug.Log("レーンを使用済みにした");
+            // 判定ボタンをアクティブにする
+            judgeButton.SetActive(true);
         }
     }
 
